@@ -26,20 +26,32 @@
 
     <div class="game-container">
         <div class="score-container">
-            <h3 class="game-name"> Rock<br>Paper<br>Scissors</h3>
+            <img class="score-logo" src="./static/images/logo.svg" alt="score-logo">
             <div class="score">
                 <h4>score</h4>
                 <p class="score-number" id="score-number">12</p>
             </div>
         </div>
-        <div class="game"></div>
+        <div class="game">
+            <div class="bg-pattern">
+                <div class="game-item paper" id="paper">
+                    <span class="img-container"> <img src="./static/images/icon-paper.svg" alt="icon-paper"></span>
+                </div>
+                <div class="game-item scissors">
+                    <span class="img-container"> <img src="./static/images/icon-scissors.svg" alt="icon-scissors" id="scissors"></span>
+                </div>
+                <div class="game-item rock">
+                    <span class="img-container" id="rock"> <img src="./static/images/icon-rock.svg" alt="icon-rock"></span>
+                </div>
+            </div>
+        </div>
         <button class="btn btn-rules">RULES</button>
     </div>
 
 
 
     <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/Takata21">Manuel Takata</a>
     </div>
 </body>
 
