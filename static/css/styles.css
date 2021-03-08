@@ -144,6 +144,11 @@
     background-repeat: no-repeat;
     background-size: 200px;
     background-position: center;
+    display: none;
+}
+
+.selection-display.active {
+    display: block;
 }
 
 .game-item {
@@ -203,11 +208,15 @@
 
 .picked-display {
     width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
+    display: none;
+}
+
+.picked-display.active {
+    display: flex;
 }
 
 .picked-payer-container {
@@ -272,7 +281,7 @@
     background-image: linear-gradient(var(--RockGradient), var(--RockGradient2));
 }
 
-.game-item.picked.wind::after {
+.game-item.picked[data-result="win"]::after {
     content: "";
     position: absolute;
     width: 300px;
@@ -281,6 +290,17 @@
     background-color: transparent;
     z-index: -1;
 }
+
+
+/* .game-item.picked.wind::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#2C3B5A 38%, #293857 38% 50%, #233455 50% 70%, transparent 70% 100%);
+    background-color: transparent;
+    z-index: -1;
+} */
 
 
 /*------------------------------*/
@@ -292,6 +312,7 @@
 /*------------------------------*/
 
 .game-result-container {
+    order: 2;
     display: grid;
     justify-content: center;
 }
@@ -363,6 +384,18 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+[data-selection="scissors"] {
+    background-image: linear-gradient(var(--ScissorsGradient), var(--ScissorsGradient2)) !important;
+}
+
+[data-selection="paper"] {
+    background-image: linear-gradient(var(--PaperGradient), var(--PaperGradient2)) !important;
+}
+
+[data-selection="rock"] {
+    background-image: linear-gradient(var(--RockGradient), var(--RockGradient2)) !important;
 }
 
 @media screen and (min-width:1080px) {

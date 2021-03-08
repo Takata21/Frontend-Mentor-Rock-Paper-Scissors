@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;400;600;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="./static/css/styles.css">
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
     <!-- Score You Picked The House Picked You Win You Lose Play Again -->
@@ -18,7 +18,7 @@
     <div class="rules-container">
         <div class="rules">
             <h2>RULES</h2>
-            <img src="./static/images/image-rules.svg" alt=""> <button class="btn btn-close-rules"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#3B4262" fill-rule="evenodd" d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z" opacity=".25"/></svg></button>
+            <img src="./static/images/image-rules.svg" alt=""> <button class="btn btn-close-rules" id="btn-close-rules"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#3B4262" fill-rule="evenodd" d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z" opacity=".25"/></svg></button>
         </div>
     </div>
 
@@ -27,41 +27,25 @@
             <img class="score-logo" src="./static/images/logo.svg" alt="score-logo">
             <div class="score">
                 <h4>score</h4>
-                <p class="score-number" id="score-number">12</p>
+                <p class="score-number" id="score-number">0</p>
             </div>
         </div>
         <div class="game">
-            <!-- <div class="selection-display" id="selection-display">
+            <div class="selection-display active" id="selection-display">
                 <div class="game-item paper selection" id="paper">
                     <span class="img-container"> <img src="./static/images/icon-paper.svg" alt="icon-paper"></span>
                 </div>
-                <div class="game-item scissors selection">
+                <div class="game-item scissors selection" id="scissors">
                     <span class="img-container"> <img src="./static/images/icon-scissors.svg" alt="icon-scissors" id="scissors"></span>
                 </div>
-                <div class="game-item rock selection">
+                <div class="game-item rock selection" id="rock">
                     <span class="img-container" id="rock"> <img src="./static/images/icon-rock.svg" alt="icon-rock"></span>
                 </div>
-            </div> -->
+            </div>
             <div class="picked-display" id="picked-display">
-                <div class="picked-payer-container" id="player">
-                    <div class="game-item-container">
-                        <div class="game-item scissors  picked wind">
-                            <span class="img-container"> <img src="./static/images/icon-scissors.svg" alt="icon-scissors" id="scissors"></span>
-                        </div>
-                    </div>
-                    <p class="picked-player-name">you picked</p>
-                </div>
-                <div class="picked-payer-container" id="computer">
-                    <div class="game-item-container">
-                        <div class="game-item rock  picked " id="pc">
-                            <span class="img-container" id="rock"> <img src="./static/images/icon-rock.svg" alt="icon-rock"></span>
-                        </div>
-                    </div>
 
-                    <p class="picked-player-name">you picked</p>
-                </div>
                 <div class="game-result-container">
-                    <h1 class="result-text">you lose</h1>
+                    <h1 class="result-text"></h1>
                     <button class="play-again" id="play-again">play again</button>
                 </div>
             </div>
@@ -69,7 +53,7 @@
         </div>
         <div class="btn-rules-container">
 
-            <button class="btn btn-rules">RULES</button>
+            <button class="btn btn-rules" id="btn-rules">RULES</button>
         </div>
     </div>
 
@@ -78,6 +62,7 @@
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/Takata21">Manuel Takata</a>
     </div>
+    <script src="./src/js/app.js" type="module"></script>
 </body>
 
 </html>

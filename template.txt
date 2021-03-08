@@ -1,0 +1,17 @@
+   <!-- <div class="picked-payer-container" id="player">
+                    <div class="game-item-container">
+                        <div class="game-item scissors  picked wind" data-result="wind" data-selection="scissors">
+                            <span class="img-container"> <img src="./static/images/icon-scissors.svg" alt="icon-scissors" id="scissors"></span>
+                        </div>
+                    </div>
+                    <p class="picked-player-name">you picked</p>
+                </div>
+                <div class="picked-payer-container" id="computer">
+                    <div class="game-item-container">
+                        <div class="game-item rock  picked " id="pc">
+                            <span class="img-container" id="rock"> <img src="./static/images/icon-rock.svg" alt="icon-rock"></span>
+                        </div>
+                    </div>
+
+                    <p class="picked-player-name">you picked</p>
+                </div> -->
