@@ -51,11 +51,14 @@ function gameStart(e) {
     items.forEach((item) => {
         fragment.appendChild(item);
     });
-
     pickedDisplay.appendChild(fragment);
     changeDisplay();
-    console.log(score);
     scoreNumber.textContent = score;
+    if (game.human.win || game.computer.win) {
+        resultText.textContent = game.human.win ? "YOU WIN" : "YOU LOSE";
+    } else {
+        resultText.textContent = "DRAW";
+    }
 }
 
 function changeDisplay() {

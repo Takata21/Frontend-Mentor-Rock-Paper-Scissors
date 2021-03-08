@@ -24,6 +24,7 @@ function getPickedDisplay(game) {
     console.log(gameData);
     const items = gameData.map((item) => {
         // debugger;
+        console.log(item);
         const pickedContainer = document.createElement("div");
         pickedContainer.classList.add("picked-payer-container");
         pickedContainer.id = item.player === "human" ? "player" : item.player;
@@ -31,6 +32,9 @@ function getPickedDisplay(game) {
         gameItemContainer.classList.add("game-item-container");
         const gameItem = document.createElement("div");
         gameItem.classList.add("game-item", "picked", `${item.selection}`);
+        if (item.win) {
+            gameItem.setAttribute("data-result", "win");
+        }
         const imageContainer = document.createElement("span");
         imageContainer.classList.add("img-container");
         imageContainer.id = item.selection;
@@ -40,24 +44,17 @@ function getPickedDisplay(game) {
         const name = document.createElement("p");
         name.classList.add("picked-player-name");
         name.textContent =
-            item.player === human ? "YOU PICKED" : "THE HOUSE PICKED";
+            item.player === "human" ? "YOU PICKED" : "THE HOUSE PICKED";
 
         imageContainer.appendChild(image);
         gameItem.appendChild(imageContainer);
         gameItemContainer.appendChild(gameItem);
         pickedContainer.appendChild(gameItemContainer);
+        pickedContainer.appendChild(name);
         return pickedContainer;
     });
     // debugger;
     return items;
-} {
-    /* <div class="picked-payer-container" id="player">
-                                                            <div class="game-item-container">
-                                                                <div class="game-item scissors  picked wind" data-result="win" data-selection="scissors">
-                                                                    <span class="img-container"> <img src="./static/images/icon-scissors.svg" alt="icon-scissors" id="scissors"></span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="picked-player-name">you picked</p>
-                                                        </div> */
 }
+
 export { getWinner, getPickedDisplay };
